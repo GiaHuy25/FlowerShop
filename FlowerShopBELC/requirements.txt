@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pydantic
+tensorflow
+opencv-python
+numpy
+pyodbc  
+python-dotenv  
