@@ -6,7 +6,7 @@ import os
 
 # Thiết lập thông số
 DATA_DIR = 'E:\\Kysu\\VanDeHienDaiCNTT\\Datasets\\flowers'  # Thay bằng đường dẫn tới dataset của bạn
-OUTPUT_MODEL_PATH = 'E:\\Kysu\VanDeHienDaiCNTT\\flower_training\\flower_model.h5'  # Đường dẫn lưu file mô hình
+OUTPUT_MODEL_PATH = "E:\\Kysu\\VanDeHienDaiCNTT\\FlowerShop\\flower_training\\flower_model.h5"  # Đường dẫn lưu file mô hình
 IMG_HEIGHT, IMG_WIDTH = 224, 224
 BATCH_SIZE = 32
 NUM_CLASSES = 5  # Số loài hoa

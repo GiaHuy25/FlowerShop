@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Đường dẫn tới file mô hình
-MODEL_PATH = 'E:\\Kysu\VanDeHienDaiCNTT\\flower_training\\flower_model.h5'  
+MODEL_PATH = "E:\\Kysu\\VanDeHienDaiCNTT\\FlowerShop\\flower_training\\flower_model.h5"  
 
 # Danh sách các loài hoa
 CLASS_NAMES = ['daisy', 'dandelion', 'rose', 'sunflower', 'tulip']
