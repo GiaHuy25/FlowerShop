@@ -171,3 +171,4 @@ cython_debug/
 .pypirc
 #training CNN
 *.h5
+*.keras
