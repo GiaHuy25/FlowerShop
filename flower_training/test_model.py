@@ -41,7 +41,7 @@ def show_result(image_path, flower_name, confidence):
 
 if __name__ == '__main__':
     # Đường dẫn tới ảnh test
-    TEST_IMAGE_PATH = 'E:\\Kysu\\VanDeHienDaiCNTT\\Datasets\\Test\\Huongduong.jpg'
+    TEST_IMAGE_PATH = 'E:\\Kysu\\VanDeHienDaiCNTT\\Datasets\\Test\\Tulip.Webp'
     
     # Load mô hình
     model = load_model(MODEL_PATH)
