@@ -13,7 +13,35 @@ CREATE TABLE Hoa (
     NgayTao DATETIME DEFAULT GETDATE()            -- Ngày tạo
 );
 GO
+INSERT INTO Hoa (TenHoa, MoTa, AnhMacDinh)
+VALUES 
+    -- Hoa Hồng
+    (N'Rose', 
+     N'Hoa hồng là loài hoa có cánh mỏng, mềm mại, thường có màu đỏ, hồng, trắng hoặc vàng. Hoa có hương thơm quyến rũ, được xem là biểu tượng của tình yêu, sự đam mê và lòng trân trọng. Trong văn hóa, hoa hồng đỏ thường tượng trưng cho tình yêu mãnh liệt, còn hoa hồng trắng thể hiện sự thuần khiết.', 
+     N'E:/Kysu/VanDeHienDaiCNTT/Datasets/flowers/rose/rose.jpg'),
+    
+    -- Hoa Bồ Công Anh
+    (N'Dandelion', 
+     N'Hoa bồ công anh nhỏ bé, thường có màu vàng tươi khi nở và chuyển thành những chùm bông trắng nhẹ bay theo gió khi chín. Loài hoa này tượng trưng cho sự tự do, hy vọng và những ước mơ bay xa. Nó cũng gắn liền với hình ảnh tuổi thơ và sự hồn nhiên.', 
+     N'E:/Kysu/VanDeHienDaiCNTT/Datasets/flowers/dandelion/dandelion.jpg'),
+    
+    -- Hoa Cúc
+    (N'Daisy', 
+     N'Hoa cúc có cánh tròn, nhỏ, thường mang màu vàng, trắng hoặc cam, với hương thơm dịu nhẹ. Đây là loài hoa biểu tượng của sự trường tồn, lòng hiếu thảo và sự chân thành. Trong văn hóa Việt Nam, hoa cúc thường được dùng để tưởng nhớ người đã khuất và cầu chúc bình an.', 
+     N'E:/Kysu/VanDeHienDaiCNTT/Datasets/flowers/daisy/daisy.jpg'),
+    
+    -- Hoa Hướng Dương
+    (N'Sunflower', 
+     N'Hoa hướng dương nổi bật với bông lớn, màu vàng rực rỡ, luôn hướng về phía mặt trời. Loài hoa này tượng trưng cho sự lạc quan, niềm tin và sức sống mãnh liệt. Hoa hướng dương thường được dùng để gửi gắm lời chúc về hạnh phúc và sự kiên định trong cuộc sống.', 
+     N'E:/Kysu/VanDeHienDaiCNTT/Datasets/flowers/sunflower/sunflower.jpg'),
+    
+    -- Hoa Tulip
+    (N'Tulip', 
+     N'Hoa tulip có hình dáng thanh mảnh, cánh hoa khép kín, mang nhiều màu sắc như đỏ, vàng, trắng, hồng. Đây là biểu tượng của tình yêu hoàn hảo, sự giàu có và danh vọng. Trong văn hóa phương Tây, hoa tulip đỏ thể hiện tình yêu sâu đậm, còn tulip vàng mang ý nghĩa niềm vui và sự tươi mới.', 
+     N'E:/Kysu/VanDeHienDaiCNTT/Datasets/flowers/tulip/tulip.jpg')
 
+GO
+delete from Hoa
 -- Bảng Sản phẩm (Products): Lưu các sản phẩm bán (liên kết với loại hoa)
 CREATE TABLE SanPham (
     SanPhamID INT PRIMARY KEY IDENTITY(1,1),       -- Khóa chính, tự tăng

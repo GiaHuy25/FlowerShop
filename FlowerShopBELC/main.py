@@ -49,6 +49,10 @@ async def test_database_connection():
     except Exception as e:
         return {"status": "error", "message": f"Lỗi kết nối database: {str(e)}"}
 
+@app.get("/images/{image_path:path}")
+async def get_image(image_path: str):
+    return FileResponse(image_path)
+
 @app.get("/")
 async def root():
     return {"message": "Welcome to Flower Shop API"}

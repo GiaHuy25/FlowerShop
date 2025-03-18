@@ -7,7 +7,7 @@ def open_browser():
     # Đợi một chút để server khởi động xong
     time.sleep(2)
     # Mở trình duyệt tại Swagger UI
-    webbrowser.open("http://localhost:5000/docs")
+    webbrowser.open("http://localhost:8000/docs")
 
 if __name__ == "__main__":
     # Mở trình duyệt trong một thread riêng để không chặn Uvicorn
@@ -16,6 +16,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=5000,
+        port=8000,
         reload=True
     )
