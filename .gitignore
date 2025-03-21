@@ -172,3 +172,4 @@ cython_debug/
 #training CNN
 *.h5
 *.keras
+*.ipynb
