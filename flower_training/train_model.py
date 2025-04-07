@@ -21,12 +21,14 @@ if not os.path.exists(DATA_DIR):
 # Tăng cường dữ liệu
 train_datagen = ImageDataGenerator(
     rescale=1./255,
-    rotation_range=30,
+    rotation_range=40,
     width_shift_range=0.3,
     height_shift_range=0.3,
     shear_range=0.3,
     zoom_range=0.3,
     horizontal_flip=True,
+    vertical_flip=True,
+    brightness_range=[0.5, 1.5],
     validation_split=0.2
 )
 
@@ -51,7 +53,11 @@ validation_generator = train_datagen.flow_from_directory(
 
 # Sử dụng MobileNetV2 làm backbone
 base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(IMG_HEIGHT, IMG_WIDTH, 3))
-base_model.trainable = False  # Đóng băng các tầng convolutional
+base_model.trainable = True
+
+# Đóng băng các tầng đầu tiên
+for layer in base_model.layers[:100]:
+    layer.trainable = False
 
 # Xây dựng mô hình mới
 model = models.Sequential([
@@ -65,7 +71,7 @@ model = models.Sequential([
 
 # Biên dịch mô hình
 model.compile(
-    optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),
+    optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4),
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
